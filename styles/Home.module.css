@@ -21,6 +21,16 @@
   align-items: center;
 }
 
+.alink {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.alink a:hover,
+.alink a:focus,
+.alink a:active {
+  text-decoration: underline;
+}
 .footer a {
   display: flex;
   justify-content: center;
