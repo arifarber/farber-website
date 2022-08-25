@@ -2,50 +2,49 @@
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
   } */
-  
-  /* ol, ul {
+
+/* ol, ul {
     padding-left: 30px;
   } */
-  
-  .boardrow:after {
+
+.boardrow:after {
     clear: both;
-    content: "";
+    content: '';
     display: table;
-  }
-  
-  .status {
+}
+
+.status {
     margin-bottom: 10px;
-  }
-  
-  .square {
+}
+
+.square {
     background: #fff;
     border: 1px solid #999;
     float: left;
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
-    line-height: 34px;
-    height: 34px;
+    line-height: 100px;
+    height: 100px;
     margin-right: -1px;
     margin-top: -1px;
     padding: 0;
     text-align: center;
-    width: 34px;
-  }
-  
-  .square:focus {
+    width: 100px;
+}
+
+.square:focus {
     outline: none;
-  }
-  
-  .kbdnavigation .square:focus {
+}
+
+.kbdnavigation .square:focus {
     background: #ddd;
-  }
-  
-  .game {
+}
+
+.game {
     display: flex;
     flex-direction: row;
-  }
-  
-  .gameinfo {
+}
+
+.gameinfo {
     margin-left: 20px;
-  }
-  
+}

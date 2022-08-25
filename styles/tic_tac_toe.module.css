@@ -1,0 +1,26 @@
+.gamespace {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+.center {
+    text-align: center;
+}
+
+.homelink {
+    color: #0070f3;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    font-size: 40px;
+}
+
+.homelink:hover,
+.homelink:focus,
+.homelink:active {
+    text-decoration: underline;
+}
+.title {
+    text-align: center;
+}
