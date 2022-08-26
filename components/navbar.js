@@ -3,7 +3,7 @@ import ThemeChanger from './DarkSwitch'
 import { Disclosure } from '@headlessui/react'
 
 export default function Navbar() {
-    const navigation = ['Projects', 'Resume']
+    // const navigation = ['Resume', 'Tic-Tac-Toe', 'Wordle']
 
     return (
         <div className="w-full">
@@ -61,6 +61,16 @@ export default function Navbar() {
                 <div className="hidden text-center lg:flex lg:items-center">
                     <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
                         <li className="mr-3 nav__item">
+                            <Link href="/games/wordle">
+                                <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                                    Wordle
+                                </a>
+                            </Link>
+                            <Link href="/games/tic_tac_toe">
+                                <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                                    Tic-Tac-Toe
+                                </a>
+                            </Link>
                             <a
                                 href="/files/resume2022.pdf"
                                 className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
@@ -70,12 +80,6 @@ export default function Navbar() {
                             >
                                 Resume
                             </a>
-
-                            <Link href="/games/tic_tac_toe">
-                                <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
-                                    Projects
-                                </a>
-                            </Link>
                         </li>
                     </ul>
                 </div>
