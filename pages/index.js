@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/home.module.css'
+import styles from '/styles/home.module.css'
 import Link from 'next/link'
 import Navbar from '/components/navbar'
 import Hero from "/components/hero";
