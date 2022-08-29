@@ -47,7 +47,7 @@ export default function Game() {
                         <KeyboardButton letter="l"></KeyboardButton>
                     </div>
                     <div>
-                        <KeyboardButton letter="Backspace"></KeyboardButton>
+                        <KeyboardButton letter="Del"></KeyboardButton>
                         <KeyboardButton letter="z"></KeyboardButton>
                         <KeyboardButton letter="x"></KeyboardButton>
                         <KeyboardButton letter="c"></KeyboardButton>
