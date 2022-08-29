@@ -1,5 +1,6 @@
 import React from 'react'
 import gameStyle from './tic_tac_toe_game.module.css'
+import Router from 'next/router'
 
 // react tutorial tic tac toe game modified for next.js
 // instead of appending to root game a default function returns <Game></Game>
@@ -102,7 +103,7 @@ class Game extends React.Component {
             const desc = move ? 'Go to move #' + move : 'Go to game start'
             return (
                 <li key={move}>
-                    <button onClick={() => this.jumpTo(move)}>{desc}</button>
+                    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded-full" onClick={() => this.jumpTo(move)}>{desc}</button>
                 </li>
             )
         })
@@ -115,8 +116,8 @@ class Game extends React.Component {
         }
 
         return (
+            <>
             <div className={gameStyle.game}>
-                {/* <h1>Hello, world!</h1> */}
                 <div className={gameStyle.gameboard}>
                     <Board
                         squares={current.squares}
@@ -128,6 +129,8 @@ class Game extends React.Component {
                     <ol>{moves}</ol>
                 </div>
             </div>
+            <ResetButton></ResetButton>
+            </>
         )
     }
 }
@@ -161,4 +164,14 @@ function calculateWinner(squares) {
         }
     }
     return null
+}
+const ResetButton = () => {
+    return (
+        <button
+            className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+            onClick={() => Router.reload()}
+        >
+            Reset
+        </button>
+    )
 }

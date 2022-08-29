@@ -1,7 +1,9 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Navbar from '/components/navbar'
 import 'animate.css'
 import GameBoard from '/components/wordleComponents/wordleGame.js'
-import Link from 'next/link'
+
 export default function Word() {
     return (
         <>
@@ -9,6 +11,7 @@ export default function Word() {
                 <title>Wordle</title>
                 <meta CharSet="UTF-8"></meta>
             </Head>
+            <Navbar></Navbar>
 
             <h1 className="text-3xl font-bold underline text-center">
                 {' '}
