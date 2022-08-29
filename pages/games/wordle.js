@@ -18,7 +18,7 @@ export default function Word() {
                 <GameBoard></GameBoard>
             </div>
             <footer>
-                <h3 class="absolute bottom-0 h-16 text-2xl hover:underline text-blue-600 font-bold">
+                <h3 className="absolute bottom-0 h-16 text-2xl hover:underline text-blue-600 font-bold">
                     <Link href="/">← Home</Link>
                 </h3>
             </footer>

@@ -61,9 +61,9 @@ function InitBoard() {
     const box = <div className={gameStyle.letterbox}></div>
 
     return [...Array(6)].map((elementInArray, index) => (
-        <div className={gameStyle.letterrow}>
+        <div key={index} className={gameStyle.letterrow}>
             {[...Array(5)].map((elementInArray, index) => (
-                <div className={gameStyle.letterbox}></div>
+                <div key={index} className={gameStyle.letterbox}></div>
             ))}
         </div>
     ))
