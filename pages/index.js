@@ -1,18 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '/styles/home.module.css'
 import Link from 'next/link'
 import Navbar from '/components/navbar'
-import Hero from "/components/hero";
-
+import Hero from '/components/hero'
 
 export default function Home() {
     return (
         <>
             <Head>
-                <title>
-                    Ari Farber
-                </title>
+                <title>Ari Farber</title>
                 <meta
                     name="description"
                     content="Nextly is a free landing page template built with next.js & Tailwind CSS"
