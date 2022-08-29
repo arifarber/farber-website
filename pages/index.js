@@ -9,7 +9,7 @@ export default function Home() {
                 <title>Ari Farber</title>
                 <meta
                     name="description"
-                    content="Nextly is a free landing page template built with next.js & Tailwind CSS"
+                    content="Personal Website of Ari Farber"
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>

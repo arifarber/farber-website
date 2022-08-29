@@ -1,8 +1,12 @@
+import { useEffect } from 'react'
 import { WORDS } from './words.js'
 import 'animate.css'
+
 import gameStyle from './wordleGame.module.css'
-import React, { useState } from 'react'
+
 import Router from 'next/router'
+
+// import keyboardReceiver from '/pages/games/wordle.js'
 
 const NUMBER_OF_GUESSES = 6
 let guessesRemaining = NUMBER_OF_GUESSES
@@ -10,6 +14,10 @@ let currentGuess = []
 let nextLetter = 0
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
 export default function Game() {
+    useEffect(() => {
+        window.addEventListener('keydown', keyboardReceiver)
+        return () => window.removeEventListener('keydown', keyboardReceiver)
+    },[])
     return (
         <>
             <div id="gameState">
@@ -39,7 +47,7 @@ export default function Game() {
                         <KeyboardButton letter="l"></KeyboardButton>
                     </div>
                     <div>
-                        <KeyboardButton letter="Del"></KeyboardButton>
+                        <KeyboardButton letter="Backspace"></KeyboardButton>
                         <KeyboardButton letter="z"></KeyboardButton>
                         <KeyboardButton letter="x"></KeyboardButton>
                         <KeyboardButton letter="c"></KeyboardButton>
@@ -55,11 +63,12 @@ export default function Game() {
         </>
     )
 }
-
+const keyboardReceiver = (letter) => {
+    HandleKeyboard(letter.key)
+}
 function InitBoard() {
     const row = <div className={gameStyle.letterrow}></div>
     const box = <div className={gameStyle.letterbox}></div>
-
     return [...Array(6)].map((elementInArray, index) => (
         <div key={index} className={gameStyle.letterrow}>
             {[...Array(5)].map((elementInArray, index) => (
@@ -91,12 +100,13 @@ const KeyboardButton = ({ letter }) => {
 }
 //todo: play around with {letter}
 const HandleKeyboard = (letter) => {
+
     if (guessesRemaining === 0) {
         return
     }
 
     let pressedKey = letter
-    if (pressedKey === 'Del' && nextLetter !== 0) {
+    if (pressedKey === 'Backspace' && nextLetter !== 0) {
         deleteLetter()
         return
     }
@@ -107,6 +117,7 @@ const HandleKeyboard = (letter) => {
     }
 
     let found = pressedKey.match(/[a-z]/gi)
+
     if (!found || found.length > 1) {
         return
     } else {
