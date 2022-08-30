@@ -6,7 +6,6 @@ import 'animate.css'
 import GameBoard from '/components/wordleComponents/wordleGame.js'
 
 export default function Word() {
-
     return (
         <>
             <Head>
@@ -16,7 +15,6 @@ export default function Word() {
             <Navbar></Navbar>
 
             <h1 className="text-3xl font-bold underline text-center">
-
                 Wordle Clone
             </h1>
             <div className="m-auto w-1/4">
@@ -29,8 +27,4 @@ export default function Word() {
             </footer>
         </>
     )
-}
-export const keyboardReceiver = (letter) => {
-    console.log("wordle.js: " + letter.key)
-    return letter.key
 }

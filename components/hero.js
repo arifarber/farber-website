@@ -14,7 +14,7 @@ export default function Hero() {
                         <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-2xl dark:text-gray-300">
                         UNC at Chapel Hill, North Carolina, May 2022
                         Bachelor of Arts in Computer Science<br></br>
-                        Minor: Modern Hebrew (proficient)
+                        Minor: Modern Hebrew
                         </p>
 {/* I can use this template to add links later if I want */}
                         {/* <div className="flex flex-col items-start space-y-3 sm:space-x-4 sm:space-y-0 sm:items-center sm:flex-row">
