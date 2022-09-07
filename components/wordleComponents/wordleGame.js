@@ -13,12 +13,12 @@ let guessesRemaining = NUMBER_OF_GUESSES
 let currentGuess = []
 let nextLetter = 0
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
-console.log(rightGuessString);
+// console.log(rightGuessString)
 export default function Game() {
     useEffect(() => {
         window.addEventListener('keydown', keyboardReceiver)
         return () => window.removeEventListener('keydown', keyboardReceiver)
-    },[])
+    }, [])
     return (
         <>
             <div id="gameState">
@@ -93,7 +93,13 @@ const KeyboardButton = ({ letter }) => {
     return (
         <button
             className={gameStyle.keyboardbutton}
-            onClick={() => HandleKeyboard(letter)}
+            onClick={() => {
+                if (letter === 'Del') {
+                    HandleKeyboard('Backspace')
+                } else {
+                    HandleKeyboard(letter)
+                }
+            }}
         >
             {letter}
         </button>
@@ -101,7 +107,6 @@ const KeyboardButton = ({ letter }) => {
 }
 //todo: play around with {letter}
 const HandleKeyboard = (letter) => {
-
     if (guessesRemaining === 0) {
         return
     }
