@@ -20,7 +20,7 @@ export default function Hero() {
                             <a
                                 href="https://github.com/arifarber/farber-website"
                                 target="_blank"
-                                rel="noopener"
+                                rel="noreferrer"
                                 className="flex items-center space-x-2 text-blue-400 dark:text-gray-400"
                             >
                                 <svg
