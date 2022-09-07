@@ -30,6 +30,7 @@ function ThemedImage() {
     return (
         <Image
             src={heroImg}
+            rel="noreferrer"
             width="616"
             height="575"
             alt="Hero Illustration"
