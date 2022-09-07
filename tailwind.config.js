@@ -8,6 +8,7 @@ module.exports = {
         './components/**/*.{js,ts,jsx,tsx}',
     ],
     darkMode: 'class', // or 'media' or 'class'
+    lightMode: 'class',
     theme: {
         extend: {
             colors: {

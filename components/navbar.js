@@ -15,7 +15,7 @@ export default function Navbar() {
                         <>
                             <div className="flex flex-wrap items-center justify-between w-full lg:w-auto">
                                 <Link href="/">
-                                    <a className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100">
+                                    <a className="flex items-center space-x-2 text-2xl font-medium text-indigo-500 dark:text-gray-100 hover:font-bold">
                                         <span>
                                             <Image
                                                 src="/img/letter-f.svg"
@@ -63,18 +63,18 @@ export default function Navbar() {
                     <ul className="items-center justify-end flex-1 pt-6 list-none lg:pt-0 lg:flex">
                         <li className="mr-3 nav__item">
                             <Link href="/games/wordle">
-                                <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                                <a className="inline-block px-4 py-2 text-lg font-normal text-indigo-500 hover:text-indigo-700 no-underline rounded-md dark:text-gray-200 dark:hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
                                     Wordle
                                 </a>
                             </Link>
                             <Link href="/games/tic_tac_toe">
-                                <a className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
+                                <a className="inline-block px-4 py-2 text-lg font-normal text-indigo-500 hover:text-indigo-700 no-underline rounded-md dark:text-gray-200 dark:hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800">
                                     Tic-Tac-Toe
                                 </a>
                             </Link>
                             <a
                                 href="/files/resume2022.pdf"
-                                className="inline-block px-4 py-2 text-lg font-normal text-gray-800 no-underline rounded-md dark:text-gray-200 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
+                                className="inline-block px-4 py-2 text-lg font-normal text-indigo-500 hover:text-indigo-700 no-underline rounded-md dark:text-gray-200 dark:hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 focus:outline-none dark:focus:bg-gray-800"
                                 alt="alt text"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -85,12 +85,15 @@ export default function Navbar() {
                     </ul>
                 </div>
 
-                <div className="hidden mr-3 space-x-4 lg:flex nav__item invisible">
-                    <Link href="/">
-                        <a className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
-                            Get Started
-                        </a>
-                    </Link>
+                <div className="hidden mr-3 space-x-4 lg:flex nav__item">
+                {/* easier to keep link than to fix formatting */}
+                    <div className="invisible">
+                        <Link href="/">
+                            <a className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
+                                Get Started
+                            </a>
+                        </Link>
+                    </div>
 
                     <ThemeChanger />
                 </div>
