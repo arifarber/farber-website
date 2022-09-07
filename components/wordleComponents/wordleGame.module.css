@@ -24,6 +24,7 @@
 
 .letterrow {
     display: flex;
+    justify-content: center;
 }
 .keyboardcont {
     margin: 1rem 0;
@@ -32,9 +33,6 @@
     align-items: center;
 }
 
-#keyboardcont div {
-    display: flex;
-}
 
 .secondrow {
     margin: 0.5rem 0;

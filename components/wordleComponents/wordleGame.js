@@ -13,6 +13,7 @@ let guessesRemaining = NUMBER_OF_GUESSES
 let currentGuess = []
 let nextLetter = 0
 let rightGuessString = WORDS[Math.floor(Math.random() * WORDS.length)]
+console.log(rightGuessString);
 export default function Game() {
     useEffect(() => {
         window.addEventListener('keydown', keyboardReceiver)
@@ -188,10 +189,10 @@ function checkGuess() {
             // letter is in the right position
             if (currentGuess[i] === rightGuess[i]) {
                 // shade green
-                letterColor = 'green'
+                letterColor = '#139638'
             } else {
                 // shade box yellow
-                letterColor = 'yellow'
+                letterColor = '#D6CD11'
             }
 
             rightGuess[letterPosition] = '#'
@@ -226,11 +227,11 @@ function shadeKeyBoard(letter, color) {
     )) {
         if (elem.textContent === letter) {
             let oldColor = elem.style.backgroundColor
-            if (oldColor === 'green') {
+            if (oldColor === '#139638') {
                 return
             }
 
-            if (oldColor === 'yellow' && color !== 'green') {
+            if (oldColor === '#D6CD11' && color !== '#139638') {
                 return
             }
 

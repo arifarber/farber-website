@@ -10,7 +10,7 @@ export default function Word() {
         <>
             <Head>
                 <title>Wordle</title>
-                <meta CharSet="UTF-8"></meta>
+                <meta charSet="UTF-8"></meta>
             </Head>
             <Navbar></Navbar>
 
